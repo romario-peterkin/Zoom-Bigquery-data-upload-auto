@@ -34,10 +34,10 @@ def uploadZoomData():
     bucket_name = "{ENTER_BUCKET_NAME}"
     dataset = '{ENTER_DATASET_NAME}'
     #User table configurations
-    source_file_name = "{ENTER_FILENAME}"
-    destination_blob_name = "{ENTER_BLOB_NAME}"
-    table = '{ENTER_TABLE_NAME}'
-    uri = "{ENTER_URI}"
+    user_source_file_name = "{ENTER_FILENAME}"
+    user_destination_blob_name = "{ENTER_BLOB_NAME}"
+    user_table = '{ENTER_TABLE_NAME}'
+    user_uri = "{ENTER_URI}"
     #IM group table configurations
     im_source_file_name = "{ENTER_FILENAME}"
     im_destination_blob_name = "{ENTER_BLOB_NAME}"
@@ -63,7 +63,7 @@ def uploadZoomData():
     
     #List of all users
     get_all_users(token)
-    upload_blob(bucket_name, source_file_name, destination_blob_name)
+    upload_blob(user_bucket_name, user_source_file_name, user_destination_blob_name)
     overwriteBigQueryTable(dataset,table,uri)
 
     #List of IM Groups
