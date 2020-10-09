@@ -13,7 +13,7 @@ import datetime as dt
 from datetime import timedelta
 import ssl
 
-
+# Serves as a main directory for the process
 ###############
 from flask import Flask, request
 
@@ -26,8 +26,6 @@ app = Flask(__name__)
 
 def uploadZoomData():
 
-    """Return a friendly HTTP greeting."""
-    who = request.args.get('who', 'World')
 
 
 
