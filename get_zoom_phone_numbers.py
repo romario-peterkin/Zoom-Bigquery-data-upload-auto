@@ -16,7 +16,6 @@ def get_all_phone_numbers(token):
     res = conn.getresponse()
     data = res.read()
 
-    #all_phone_numbers = data.decode("utf-8")
     all_phone_numbers = json.loads(data.decode("utf-8"))
     print(all_phone_numbers['total_records'])
 
